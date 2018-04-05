@@ -1,0 +1,18 @@
+﻿@model Screenshot2;
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<form action="/SaveChanges" method="post">
+	Foo: <input type="text" name="Foo" value="@Model.Foo" /><br/>
+	Bar: <input type="text" name="Bar" value="" class="datepicker" />
+	<input type="submit" value="Submit" />
+</form>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		var something = ;	// catastrophic parse issue
+		$(".jq-datepicker").datepicker();
+	})
+</script>
+

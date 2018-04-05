@@ -1,0 +1,15 @@
+Incorporate ideas around timing delays when doing interactive stuff
+
+Make all PageObject properties private, force tests to interact w/ object via methods to force developers to document WHY it matters
+
+Drill into what makes a good assert and page interaction. The existence of a <tr> is a poor way to assert that search results show up, for instance.
+
+Hard to tell the difference between an actual regression, and just a broken test because an element lookup failed. Expressive code / intent revealing code is critical.
+
+Don't select things by looking for text
+
+Don't make assumptions about ordering or sequencing of things, unless that's the point of the test
+
+GoToPage should assert it made it
+
+GoToPage should deal with "page unload" hook
