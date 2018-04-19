@@ -14,7 +14,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestableCode.Slide2 {
 	public class ApplicationDataEntryFormTests {
 
 		[Test]
-		public void When_user_is_licensed_then_cycle_dates_are_visible() {
+		public void When_user_is_licensed_then_shows_cycle_dates() {
 			var user = UserHelper.Create(
 				isLicensed: true,
 				cycleEndDate: new DateTime(2018, 1, 1)

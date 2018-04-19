@@ -13,23 +13,18 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestableCode.Slide3 {
 	[TestFixture]
 	public class ApplicationDataEntryFormTests {
 
-		[TestCase(true)]
-		[TestCase(false)]
-		public void When_user_is_licensed_then_cycle_dates_are_visible(bool licensed) {
+		[TestCase(true, "1/1/2018")]
+		[TestCase(false, "Not licensed")]
+		public void When_user_is_licensed_then_shows_cycle_dates(bool licensed, string date) {
 			var user = UserHelper.Create(
 				isLicensed: licensed,
-				cycleEndDate: new DateTime(2018, 1, 1)
+				cycleEndDate: licensed ? DateTime.Parse(date) : DateTime.MinValue
 			);
 
 			var model = new MyAccountViewModel(user);
 			var result = model.RenderCycleDates();
 
-			if (licensed) {
-				Assert.That(result, Is.EqualTo(user.CycleEnd));
-			}
-			else {
-				Assert.That(result, Is.EqualTo("Not licensed"));
-			}
+			Assert.That(result, Is.EqualTo(date));
 		}
 
 		internal class MyAccountViewModel {
@@ -49,7 +44,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestableCode.Slide3 {
 		}
 
 		public static class UserHelper {
-			internal static User Create(bool isLicensed, DateTime cycleEndDate) {
+			internal static User Create(bool isLicensed, DateTime? cycleEndDate) {
 				throw new NotImplementedException();
 			}
 

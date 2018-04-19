@@ -17,9 +17,11 @@ namespace AdvancedUITesting.ScreenShotsForSlides.PageObjects.Slide1 {
 		public IWebElement SubmitButton { get; protected set; }
 
 		public void LoginAs(string emailAddress, string password) {
+
 			UserName.ClearAndSendKeys(emailAddress);
 			Password.ClearAndSendKeys(password);
 			SubmitButton.Click();
+
 		}
 	}
 }

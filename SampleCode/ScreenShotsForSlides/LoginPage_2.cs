@@ -19,9 +19,11 @@ namespace AdvancedUITesting.ScreenShotsForSlides.PageObjects.Slide2 {
 		public IWebElement SubmitButton { get; protected set; }
 
 		public void LoginAs(string emailAddress, string password) {
+
 			findElementWithId("UserName").SetText(emailAddress);
 			findElementsWithClass("password-class").First().SetText(password);
 			findElementsByCSS("#LoginForm > button").First().Click();
+
 		}
 
 		private List<FakeWebElement> findElementsByCSS(string v) {
