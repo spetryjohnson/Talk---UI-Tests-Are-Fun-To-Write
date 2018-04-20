@@ -18,17 +18,24 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide2 {
 		ApplicationFormPage DataEntryPage;
 
 		[Test]
-		public void Applicants_can_submit_application_with_fee() {
+		public void Applicants_can_submit_data_entry_form() {
 			DataEntryPage.GoToPage(
-				DataEntryForms.FORM_WITH_APPLICATION_FEE
-			); // ...
+				DataEntryForms.SAMPLE_FORM
+			); 
+			
+			// test body goes here...
 		}
 	}
 
 	public static class DataEntryForms {
-		public const int FORM_WITH_APPLICATION_FEE = 1;
-		public const int FORM_WITH_MULTI_TABBED_UI = 2;
-		public const int FORM_WITH_MANUAL_REVIEW_STEP = 3;
+		public const int SAMPLE_FORM = 1;
+		public const int FORM_WITH_APPLICATION_FEE = 2;
+		public const int FORM_WITH_MULTI_TABBED_UI = 3;
+		public const int FORM_WITH_MANUAL_REVIEW_STEP = 4;
+		public const int FORM_WITH_APPLICATION_FEE_MULTI_TAB = 5;
+		public const int FORM_WITH_REVIEW_STEP_BY_EXTERNAL_USER = 6;
+		public const int FORM_WITH_SINGLE_FILE_UPLOAD = 7;
+		public const int FORM_WITH_MULTIPLE_FILE_ULOADS = 8;
 	}
 
 

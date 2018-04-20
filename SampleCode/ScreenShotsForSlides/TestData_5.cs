@@ -18,7 +18,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide5 {
 		[Test]
 		public void Applicants_can_submit_application_with_fee() {
 			var dataEntryForm = new DataEntryForm(
-				multiTab: true
+				fee: 42.00m
 			);
 			Database.Save(dataEntryForm);
 
@@ -54,7 +54,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide5 {
 	public class DataEntryForm {
 		private bool multiTab;
 
-		public DataEntryForm(bool multiTab) {
+		public DataEntryForm(bool multiTab = false, decimal fee = 0m) {
 			this.multiTab = multiTab;
 		}
 

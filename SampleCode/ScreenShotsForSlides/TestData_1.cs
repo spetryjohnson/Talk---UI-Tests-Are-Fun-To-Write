@@ -17,9 +17,10 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide1 {
 		ApplicationFormPage DataEntryPage;
 
 		[Test]
-		public void Applicants_can_submit_application_with_fee() {
-			DataEntryPage.GoToPage(id: 0);	// ????
-			// ...
+		public void Applicants_can_submit_data_entry_form() {
+			DataEntryPage.GoToPage(id: 0);	
+			
+			// test body goes here...
 		}
 	}
 
