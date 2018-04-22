@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="BasePageObject_1b.cs" />
     <Compile Include="GoToPage_1.cs" />
+    <Compile Include="LoginPage_5.cs" />
     <Compile Include="LoginPage_4.cs" />
     <Compile Include="LoginPage_3.cs" />
     <Compile Include="PageObject_2.cs" />

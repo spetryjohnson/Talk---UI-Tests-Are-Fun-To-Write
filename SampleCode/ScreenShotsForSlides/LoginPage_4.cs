@@ -53,6 +53,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.PageObjects.Slide4 {
 
 		[Test]
 		public void When_account_is_locked_displays_failure_message() {
+			// ... (setup code to lock the account goes here)
 			LoginPage.UserName.ClearAndSendKeys(ADMIN_USERNAME);
 			LoginPage.Password.ClearAndSendKeys(ADMIN_PASSWORD);
 			LoginPage.SubmitButton.Click();
@@ -81,6 +82,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.PageObjects.Slide4 {
 
 		[Test]
 		public void Triggers_password_reset_if_password_is_stale() {
+			// ... (setup code to trigger password reset goes here)
 			LoginPage.UserName.ClearAndSendKeys(USER_USERNAME);
 			LoginPage.Password.ClearAndSendKeys(USER_PASSWORD);
 			LoginPage.SubmitButton.Click();
