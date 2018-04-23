@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="BasePageObject_1b.cs" />
     <Compile Include="GoToPage_1.cs" />
+    <Compile Include="TreeOfLife_2.cs" />
+    <Compile Include="TreeOfLife_1.cs" />
     <Compile Include="LoginPage_5.cs" />
     <Compile Include="LoginPage_4.cs" />
     <Compile Include="LoginPage_3.cs" />
@@ -97,6 +99,10 @@
       <Project>{29d23871-20c8-445e-bafb-656a952b9526}</Project>
       <Name>SeleniumTests</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TreeOfLife_2.html" />
+    <Content Include="TreeOfLife_1.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
