@@ -12,11 +12,14 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestableCode.Slide5 {
 
 	public class SomePageObject {
 
-		[FindsBy(How = How.CssSelector, Using = "a.selenium-SomeImportantLink")]
-		public IWebElement SomeImportantLink { get; set; }
+		[FindsBy(How = How.CssSelector, Using = "#Selenium-SomeLink")]
+		public IWebElement LinkById { get; set; }
 
-		[FindsBy(How = How.CssSelector, Using = "#Selenium-SomeImportantLink")]
-		public IWebElement AnotherImportantLink { get; set; }
+		[FindsBy(How = How.CssSelector, Using = "a.selenium-SomeLink")]
+		public IWebElement LinkByClass { get; set; }
+
+		[FindsBy(How = How.CssSelector, Using = "a[data-selenium='SomeLink']")]
+		public IWebElement LinkByDataAttr { get; set; }
 	}
 
 }

@@ -17,8 +17,9 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide7 {
 		[Test]
 		public void Applicants_can_submit_application_with_fee() {
 			var dataEntryForm = new DataEntryForm(
-				new Credential(new Interval(), new Board()),
-				new Member(new Address(), new Address())
+				fee: 42.00m,
+				credential: new Credential(new Interval(...)),
+				owner: new Member(new Address(...))
 			);
 			Database.Save(dataEntryForm);
 
@@ -69,9 +70,9 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide7 {
 		private Credential credential;
 		private Member member;
 
-		public DataEntryForm(Credential credential, Member member) {
+		public DataEntryForm(decimal fee, Credential credential, Member owner) {
 			this.credential = credential;
-			this.member = member;
+			this.member = owner;
 		}
 
 		public bool IsMultiTab { get; internal set; }
@@ -85,7 +86,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide7 {
 		public Credential() {
 		}
 
-		public Credential(Interval interval, Board board) {
+		public Credential(Interval interval, Board board = null) {
 			this.interval = interval;
 			this.board = board;
 		}

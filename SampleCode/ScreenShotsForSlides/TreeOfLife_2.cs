@@ -10,7 +10,7 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TreeOfLife.Slide2 {
 
 	public class LoginPage {
 
-		[FindsBy(How = How.Id, Using = "table.Foo > tr > td > a")]
+		[FindsBy(How = How.CssSelector, Using = "#Foo > tr > td > a")]
 		public IWebElement Foo { get; protected set; }
 	}
 }

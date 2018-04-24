@@ -17,12 +17,12 @@ namespace AdvancedUITesting.ScreenShotsForSlides.TestData.Slide8 {
 
 		[Test]
 		public void Applicants_can_submit_application_with_fee() {
-			// unit tests just do this
+			// create in memory (all tests do this)
 			var dataEntryForm = DataEntryFormHelper.Create(
 				fee: 50.00m
 			);
 
-			// data/integration/UI tests also do this
+			// save to disk (for data/integration/UI tests)
 			DataEntryFormHelper.Save(dbContext, dataEntryForm);
 
 			DataEntryPage.GoToPage(id: dataEntryForm.Id);
