@@ -102,6 +102,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TreeOfLife_3.html" />
     <Content Include="TreeOfLife_2.html" />
     <Content Include="TreeOfLife_1.html" />
   </ItemGroup>
