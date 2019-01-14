@@ -1,0 +1,4 @@
+Share details of our setup (how many tests, how long do they take, etc)
+
+Include story: ClickOnce blocking USAePay lost session timeout check
+
